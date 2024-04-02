@@ -2,7 +2,6 @@
 
 import Image from "next/image"; // Corrected import
 import { motion } from "framer-motion";
-import { fadeIn } from "@/lib/veritatis"; // Corrected import
 
 const classes = [
   {
