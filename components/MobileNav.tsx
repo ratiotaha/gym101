@@ -1,33 +1,38 @@
-const ScrollLink = require("react-scroll").Link;
+import { Link } from "react-scroll";
 
-const Nav = ({ containerStyles }) => {
+interface NavProps {
+  containerStyles: string; // Assuming containerStyles is a string
+}
+
+const Nav: React.FC<NavProps> = ({ containerStyles }) => {
   const links = [
-    { name: "home ", target: "home", offset: -100 },
-    { name: "about ", target: "about", offset: -80 },
-    { name: "class ", target: "class", offset: -80 },
-    { name: "team ", target: "team", offset: -0 },
-    { name: "prices ", target: "prices", offset: -40 },
-    { name: "tesstimonial ", target: "testimonial", offset: -0 },
-    { name: "contact ", target: "contact", offset: 0 },
+    { name: "Home", target: "home", offset: -100 },
+    { name: "About", target: "about", offset: -80 },
+    { name: "Class", target: "class", offset: -80 },
+    { name: "Team", target: "team", offset: -0 },
+    { name: "Prices", target: "prices", offset: -40 },
+    { name: "Testimonial", target: "testimonial", offset: -0 },
+    { name: "Contact", target: "contact", offset: 0 },
   ];
 
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, index) => (
-        <ScrollLink
-          offset={link.offset}
-          to={link.target}
-          smooth
-          spy
-          activeClass="active"
-          className="cursor-pointer hover:text-accent transition-all"
+        <Link
           key={index}
+          to={link.target}
+          spy={true}
+          smooth={true}
+          offset={link.offset}
+          duration={500}
+          className="cursor-pointer hover:text-accent transition-all"
+          activeClass="active"
         >
-          {link.name}
-        </ScrollLink>
+          {link.name.trim()}
+        </Link>
       ))}
     </nav>
   );
 };
 
-module.exports = Nav;
+export default Nav;

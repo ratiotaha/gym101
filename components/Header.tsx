@@ -1,8 +1,7 @@
 "use client";
 
-import { Link } from "react-scroll";
+import Nav from "./Nav"; // Import the Nav component
 import MobileNav from "./MobileNav";
-import Nav from "./Nav";
 import { useEffect, useState } from "react";
 import { MdMenu } from "react-icons/md";
 
@@ -31,12 +30,17 @@ const Header = () => {
         <img src="/assets/images/logo.png" alt="Logo" width={117} height={55} />
         <MobileNav
           containerStyles={`${
-            openNav ? "max-h-max pt-8 pb-10 border-t border-white/10" : "max-h-0 pt-0 pb-0 overflow-hidden border-white/0"
+            openNav
+              ? "max-h-max pt-8 pb-10 border-t border-white/10"
+              : "max-h-0 pt-0 pb-0 overflow-hidden border-white/0"
           } xl:hidden text-white flex flex-col text-center gap-8 fixed bg-primary-200 w-full left-0 top-[124px] text-base uppercase font-medium`}
         />
         <Nav containerStyles="flex gap-4 hidden xl:flex text-white" />
         <div>
-          <button onClick={() => setOpenNav(!openNav)} className="text-white xl:hidden">
+          <button
+            onClick={() => setOpenNav(!openNav)}
+            className="text-white xl:hidden"
+          >
             <MdMenu className="text-4xl" />
           </button>
         </div>
