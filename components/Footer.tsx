@@ -53,17 +53,17 @@ const Footer = () => {
           <h4 className="h4 text-accent mb-4 font-bold">Gallery</h4>
           <div className="grid grid-cols-3 gap-4">
             <img
-              src="/assets/images/gallery/image1.jpg"
+              src="/assets/images/blog/post3.jpg"
               alt="Image 1"
               className="w-full h-auto"
             />
             <img
-              src="/assets/images/gallery/image2.jpg"
+              src="/assets/images/blog/post2.jpg"
               alt="Image 2"
               className="w-full h-auto"
             />
             <img
-              src="/assets/images/gallery/image3.jpg"
+              src="/assets/images/blog/post1.jpg"
               alt="Image 3"
               className="w-full h-auto"
             />

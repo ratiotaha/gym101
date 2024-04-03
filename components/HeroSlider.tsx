@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const HeroSlider = () => {
   return (
     <Swiper>
-      <SwiperSlide className="h-full flex justify-end pt-48 ">
+      <SwiperSlide className="h-full flex justify-end pt-50 ">
         <div className=" flex flex-col justify-center items-center sm:justify-start sm:items-start">
           <h1 className="h1 text-center lg:text-left mb-2">
             <span>Where hard </span> work meets success

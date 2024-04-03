@@ -60,13 +60,17 @@ const MembershipSlider = () => {
     >
       {membershipData.map((membership, index) => (
         <SwiperSlide key={index}>
-          <div className="border border-accent hover:bg-primary-300/80 transition-all duration-300 w-full max-w-sm xl:max-w-none mx-auto p-4">
+          <div className="border border-accent bg-black hover:bg-red-700 transition-all duration-300 w-full max-w-sm xl:max-w-none mx-auto p-4">
             <h2 className="text-xl font-bold">{membership.title}</h2>
-            <p className="text-gray-600">${membership.price}/month</p>
+            <p className="text-white-600">${membership.price}/month</p>
             <ul className="mt-4">
               {membership.benefits.map((benefit, i) => (
                 <li key={i} className="flex items-center mb-2">
-                  <span className="mr-2">{React.createElement(benefit.icon, {className: "text-green-500"})}</span>
+                  <span className="mr-2">
+                    {React.createElement(benefit.icon, {
+                      className: "text-green-500",
+                    })}
+                  </span>
                   <span>{benefit.text}</span>
                 </li>
               ))}

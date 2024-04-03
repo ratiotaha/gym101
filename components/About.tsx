@@ -28,7 +28,7 @@ const About = () => {
     <section className="pt-8 pb-14 lg:pt-16 lg:pb-28" id="about">
       <div className="container mx-auto">
         <div className="flex flex-col item-center gap-2 mb-8">
-          <h2 className="h2 text-center">About us</h2>
+          <h2 className="h2 text-center pt-[20px]">About us</h2>
           <p className="max-w-[600px] mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aliquid
             totam corrupti beatae non eos ipsa fugit voluptate ex! Alias eveniet
